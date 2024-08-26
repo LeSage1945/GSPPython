@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenu %}
+	<div class="contenair">
+		<h3 class="text-center mt-3"> Plus d'informations sur <span class="text-primary"> {{mesDetails.nomPrenom}} </span></h3>
+	</div>
+	<div class="contenair">
+		<center>
+					<div class="card" style="width: 18rem;">
+		  <img src="{{mesDetails.profil.url}}" class="card-img-top" alt="...">
+		  <div class="card-body">
+		    <h5 class="card-title">{{mesDetails.nomPrenom}}</h5>
+		    <p class="card-text"></p>
+		  </div>
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">Matricule : {{mesDetails.matricule}}</li>
+		    <li class="list-group-item">Filiere : {{mesDetails.filiere}}</li>
+		    <li class="list-group-item">Niveau : {{mesDetails.niveau}}</li>
+		    <li class="list-group-item">Annee Academique : {{mesDetails.annAcademique}}</li>
+		    <li class="list-group-item">Date d'inscription : {{mesDetails.date_inscription}}</li>
+		  </ul>
+		  <div class="card-body">
+		    <a href="#" class="card-link">Card link</a>
+		    <a href="#" class="card-link">Another link</a>
+		  </div>
+		</div>
+		</center>
+	</div>
+{% endblock %}

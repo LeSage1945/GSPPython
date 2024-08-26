@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenu %}
+<div class="container-xxl py-5 category">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Nous Contacter</h6>
+            <h1 class="mb-5">institu2i@gmail.com</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container offset-0 ">
+	<div class="col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="Nom" name="Nom" placeholder="votre nom">
+                                    <label for="Nom">Nom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="Prenom" name="Prenom" placeholder="votre prenom">
+                                    <label for="Prenom">Prenom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="sujet" name="sujet" placeholder="votre sujet">
+                                    <label for="sujet">Sujet</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="Email" name="Email" placeholder="votre email">
+                                    <label for="Email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                	<textarea class="form-control" id="message" name="message"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                    
+                            
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+</div>
+{% endblock %}
